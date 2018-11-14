@@ -11,12 +11,18 @@
 		625A7943ED0339121F00CFD2 /* libPods-JSAUIKitCocoaDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD55116953FEDE9CE1E57A7 /* libPods-JSAUIKitCocoaDemoUITests.a */; };
 		F4EA1F0520544A7A3D29F83F /* libPods-JSAUIKitCocoaDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F23E68A94665E47C87A3CCB7 /* libPods-JSAUIKitCocoaDemo.a */; };
 		F7A5217F219B17E4002A67D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A5217E219B17E4002A67D0 /* AppDelegate.m */; };
-		F7A52182219B17E4002A67D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A52181219B17E4002A67D0 /* ViewController.m */; };
 		F7A52187219B17E5002A67D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A52186219B17E5002A67D0 /* Assets.xcassets */; };
 		F7A5218A219B17E5002A67D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A52188219B17E5002A67D0 /* LaunchScreen.storyboard */; };
 		F7A5218D219B17E5002A67D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A5218C219B17E5002A67D0 /* main.m */; };
 		F7A52197219B17E5002A67D0 /* JSAUIKitCocoaDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A52196219B17E5002A67D0 /* JSAUIKitCocoaDemoTests.m */; };
 		F7A521A2219B17E5002A67D0 /* JSAUIKitCocoaDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521A1219B17E5002A67D0 /* JSAUIKitCocoaDemoUITests.m */; };
+		F7A521B3219B24B2002A67D0 /* JSAUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521B2219B24B2002A67D0 /* JSAUIViewController.m */; };
+		F7A521B7219B2E47002A67D0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = F7A521B6219B2E47002A67D0 /* app */; };
+		F7A521BA219BDF39002A67D0 /* JSAUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521B9219BDF39002A67D0 /* JSAUIView.m */; };
+		F7A521BD219C0D80002A67D0 /* jsa in Resources */ = {isa = PBXBuildFile; fileRef = F7A521BC219C0D80002A67D0 /* jsa */; };
+		F7A521C0219C12DE002A67D0 /* JSAMyRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521BF219C12DE002A67D0 /* JSAMyRelativeLayout.m */; };
+		F7A521C3219C1623002A67D0 /* JSAUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521C2219C1623002A67D0 /* JSAUIColor.m */; };
+		F7A521C6219C4B00002A67D0 /* JSAMyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +54,6 @@
 		F7A5217A219B17E4002A67D0 /* JSAUIKitCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSAUIKitCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5217D219B17E4002A67D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7A5217E219B17E4002A67D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F7A52180219B17E4002A67D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F7A52181219B17E4002A67D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F7A52186219B17E5002A67D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7A52189219B17E5002A67D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7A5218B219B17E5002A67D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +64,19 @@
 		F7A5219D219B17E5002A67D0 /* JSAUIKitCocoaDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSAUIKitCocoaDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A521A1219B17E5002A67D0 /* JSAUIKitCocoaDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIKitCocoaDemoUITests.m; sourceTree = "<group>"; };
 		F7A521A3219B17E5002A67D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A521B1219B24B2002A67D0 /* JSAUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUIViewController.h; sourceTree = "<group>"; };
+		F7A521B2219B24B2002A67D0 /* JSAUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIViewController.m; sourceTree = "<group>"; };
+		F7A521B4219B2524002A67D0 /* JSAUIKitCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUIKitCocoa.h; sourceTree = "<group>"; };
+		F7A521B6219B2E47002A67D0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
+		F7A521B8219BDF39002A67D0 /* JSAUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUIView.h; sourceTree = "<group>"; };
+		F7A521B9219BDF39002A67D0 /* JSAUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIView.m; sourceTree = "<group>"; };
+		F7A521BC219C0D80002A67D0 /* jsa */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jsa; sourceTree = "<group>"; };
+		F7A521BE219C12DE002A67D0 /* JSAMyRelativeLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAMyRelativeLayout.h; sourceTree = "<group>"; };
+		F7A521BF219C12DE002A67D0 /* JSAMyRelativeLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAMyRelativeLayout.m; sourceTree = "<group>"; };
+		F7A521C1219C1623002A67D0 /* JSAUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUIColor.h; sourceTree = "<group>"; };
+		F7A521C2219C1623002A67D0 /* JSAUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIColor.m; sourceTree = "<group>"; };
+		F7A521C4219C4B00002A67D0 /* JSAMyLayoutPos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAMyLayoutPos.h; sourceTree = "<group>"; };
+		F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAMyLayoutPos.m; sourceTree = "<group>"; };
 		FFEA1DCCC07F03C49D38FFFF /* Pods-JSAUIKitCocoaDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-JSAUIKitCocoaDemoTests/Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +134,8 @@
 		F7A52171219B17E4002A67D0 = {
 			isa = PBXGroup;
 			children = (
+				F7A521BB219C0D54002A67D0 /* Assets */,
+				F7A521AF219B222A002A67D0 /* JSAUIKitCocoa */,
 				F7A5217C219B17E4002A67D0 /* JSAUIKitCocoaDemo */,
 				F7A52195219B17E5002A67D0 /* JSAUIKitCocoaDemoTests */,
 				F7A521A0219B17E5002A67D0 /* JSAUIKitCocoaDemoUITests */,
@@ -139,10 +158,9 @@
 		F7A5217C219B17E4002A67D0 /* JSAUIKitCocoaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F7A521B5219B2E07002A67D0 /* JSApp */,
 				F7A5217D219B17E4002A67D0 /* AppDelegate.h */,
 				F7A5217E219B17E4002A67D0 /* AppDelegate.m */,
-				F7A52180219B17E4002A67D0 /* ViewController.h */,
-				F7A52181219B17E4002A67D0 /* ViewController.m */,
 				F7A52186219B17E5002A67D0 /* Assets.xcassets */,
 				F7A52188219B17E5002A67D0 /* LaunchScreen.storyboard */,
 				F7A5218B219B17E5002A67D0 /* Info.plist */,
@@ -167,6 +185,48 @@
 				F7A521A3219B17E5002A67D0 /* Info.plist */,
 			);
 			path = JSAUIKitCocoaDemoUITests;
+			sourceTree = "<group>";
+		};
+		F7A521AF219B222A002A67D0 /* JSAUIKitCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				F7A521B0219B223C002A67D0 /* Classes */,
+				F7A521B4219B2524002A67D0 /* JSAUIKitCocoa.h */,
+				F7A521B8219BDF39002A67D0 /* JSAUIView.h */,
+				F7A521B1219B24B2002A67D0 /* JSAUIViewController.h */,
+				F7A521C4219C4B00002A67D0 /* JSAMyLayoutPos.h */,
+				F7A521BE219C12DE002A67D0 /* JSAMyRelativeLayout.h */,
+			);
+			path = JSAUIKitCocoa;
+			sourceTree = "<group>";
+		};
+		F7A521B0219B223C002A67D0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F7A521B9219BDF39002A67D0 /* JSAUIView.m */,
+				F7A521B2219B24B2002A67D0 /* JSAUIViewController.m */,
+				F7A521BF219C12DE002A67D0 /* JSAMyRelativeLayout.m */,
+				F7A521C1219C1623002A67D0 /* JSAUIColor.h */,
+				F7A521C2219C1623002A67D0 /* JSAUIColor.m */,
+				F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F7A521B5219B2E07002A67D0 /* JSApp */ = {
+			isa = PBXGroup;
+			children = (
+				F7A521B6219B2E47002A67D0 /* app */,
+			);
+			path = JSApp;
+			sourceTree = "<group>";
+		};
+		F7A521BB219C0D54002A67D0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F7A521BC219C0D80002A67D0 /* jsa */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +336,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A521B7219B2E47002A67D0 /* app in Resources */,
+				F7A521BD219C0D80002A67D0 /* jsa in Resources */,
 				F7A5218A219B17E5002A67D0 /* LaunchScreen.storyboard in Resources */,
 				F7A52187219B17E5002A67D0 /* Assets.xcassets in Resources */,
 			);
@@ -395,9 +457,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A52182219B17E4002A67D0 /* ViewController.m in Sources */,
+				F7A521C3219C1623002A67D0 /* JSAUIColor.m in Sources */,
 				F7A5218D219B17E5002A67D0 /* main.m in Sources */,
 				F7A5217F219B17E4002A67D0 /* AppDelegate.m in Sources */,
+				F7A521BA219BDF39002A67D0 /* JSAUIView.m in Sources */,
+				F7A521C0219C12DE002A67D0 /* JSAMyRelativeLayout.m in Sources */,
+				F7A521B3219B24B2002A67D0 /* JSAUIViewController.m in Sources */,
+				F7A521C6219C4B00002A67D0 /* JSAMyLayoutPos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

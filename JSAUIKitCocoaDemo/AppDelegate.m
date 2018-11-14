@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "JSAUIKitCocoa.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    ViewController *vc = [[ViewController alloc]init];
-    [self.window setRootViewController:vc];
+    JSA4Cocoa* jsa = [JSAUIViewController sharedJSA];
+    [jsa startEngine];
+    JSAUIViewController *mainVC = [[JSAUIViewController alloc] initWithJSClass:@"app.Main" Arguments:@[]];
+    [self.window setRootViewController:mainVC];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
