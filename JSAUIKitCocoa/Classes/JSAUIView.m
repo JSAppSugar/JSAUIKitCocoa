@@ -8,6 +8,10 @@
 
 #import "JSAUIView.h"
 #import "JSAUIColor.h"
+#import <JSA4Cocoa/JSA4Cocoa.h>
+#import <objc/runtime.h>
+
+static const char ASSOCIATEDOBJECT_KEY_JSA_ONCLICK;
 
 @implementation UIView(JSAppSugar)
 
@@ -38,6 +42,13 @@
             NSString* backgroundColor = [param objectForKey:@"backgroundColor"];
             if(backgroundColor){
                 self.backgroundColor = [UIColor colorWithHexStringJSA:backgroundColor];
+            }
+            id<JSAFunction> onClick = [param objectForKey:@"onClick"];
+            if(onClick){
+                objc_setAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_ONCLICK, onClick, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:onClick action:@selector(call)];
+                [self addGestureRecognizer:tap];
+                self.userInteractionEnabled = YES;
             }
         }
     }

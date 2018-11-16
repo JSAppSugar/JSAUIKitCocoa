@@ -13,6 +13,9 @@ $class("app.Main",{
 					width:100,
 					height:100,
 					backgroundColor:"#00FF00",
+					onClick : function(){
+						console.log("click");
+					},
 				}),
 				centerXPos : 0,
 				topPos : {

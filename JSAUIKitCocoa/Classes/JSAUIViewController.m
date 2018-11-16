@@ -9,19 +9,19 @@
 #import "JSAUIViewController.h"
 #import <objc/runtime.h>
 
-const char * const ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER = "ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER";
+static const char ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER;
 
 @implementation UIViewController(JSAppSugar)
 
 -(instancetype) initWithJSClass:(NSString*) jsClassName Arguments:(NSArray*) arguments{
     if(self = [self init]){
-        objc_setAssociatedObject(self, ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER, [[JSAUIViewController sharedJSA] newClass:jsClassName Arguments:arguments], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER, [[JSAUIViewController sharedJSA] newClass:jsClassName Arguments:arguments], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return self;
 }
 
 -(id<JSAObject>) controllerModel{
-    return objc_getAssociatedObject(self, ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER);
+    return objc_getAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER);
 }
 
 @end
