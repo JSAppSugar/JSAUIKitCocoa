@@ -55,6 +55,15 @@ static const char ASSOCIATEDOBJECT_KEY_JSA_ONCLICK;
                 [self addGestureRecognizer:tap];
                 self.userInteractionEnabled = YES;
             }
+            
+            NSArray * subviews = [param objectForKey:@"subviews"];
+            if(subviews){
+                for(id subview in subviews){
+                    if([subview isKindOfClass: UIView.class]){
+                        [self addSubview:subview];
+                    }
+                }
+            }
         }
     }
     return self;

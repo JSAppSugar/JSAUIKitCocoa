@@ -81,4 +81,33 @@
     }
 }
 
++(void) setMyLayoutExtWithView:(UIView*) view Param:(NSDictionary *)param{
+    
+#define My_Layout_Number_Case(_pos)\
+NSNumber* _pos = [param valueForKey:[NSString stringWithUTF8String:#_pos]];\
+if(_pos!=nil){\
+view._pos = [_pos floatValue];\
+}
+    My_Layout_Number_Case(myTop)
+    My_Layout_Number_Case(myLeft)
+    My_Layout_Number_Case(myBottom)
+    My_Layout_Number_Case(myRight)
+    My_Layout_Number_Case(myCenterX)
+    My_Layout_Number_Case(myCenterY)
+    My_Layout_Number_Case(weight)
+    My_Layout_Number_Case(myMargin)
+    My_Layout_Number_Case(myHorzMargin)
+    My_Layout_Number_Case(myVertMargin)
+    
+    
+#define My_Layout_Bool_Case(_pos)\
+NSNumber* _pos = [param valueForKey:[NSString stringWithUTF8String:#_pos]];\
+if(_pos!=nil){\
+view._pos = [_pos boolValue];\
+}
+    My_Layout_Bool_Case(wrapContentWidth)
+    My_Layout_Bool_Case(wrapContentHeight)
+    
+}
+
 @end

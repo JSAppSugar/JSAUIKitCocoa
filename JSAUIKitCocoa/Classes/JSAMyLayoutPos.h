@@ -41,5 +41,7 @@
  */
 +(void) setPos:(MyLayoutPos*) pos JSAValue:(id) value Views:(NSDictionary*) views;
 
++(void) setMyLayoutExtWithView:(UIView*) view Param:(NSDictionary *)param;
+
 @end
 

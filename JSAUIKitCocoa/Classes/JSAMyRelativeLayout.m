@@ -14,6 +14,9 @@
 
 -(instancetype) initWithJSAParam:(NSDictionary *) param{
     if(self = [super initWithJSAParam:param]){
+        
+        [MyLayoutPos setMyLayoutExtWithView:self Param:param];
+        
         NSArray * subviews = [param objectForKey:@"subviews"];
         if(subviews){
             NSMutableDictionary *idViews = [[NSMutableDictionary alloc] initWithCapacity: subviews.count];
@@ -39,7 +42,9 @@ if(_pos!=nil){\
                 My_Layout_Pos_Case(centerXPos)
                 My_Layout_Pos_Case(centerYPos)
                 
+                [MyLayoutPos setMyLayoutExtWithView:view Param:param];
                 [self addSubview:view];
+                
             }
         }
     }
