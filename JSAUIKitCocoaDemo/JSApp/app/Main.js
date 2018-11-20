@@ -1,14 +1,15 @@
 $import(
-	"jsa.cocoa.ControllerModel"
+	"jsa.cocoa.UIViewController"
 	);
 
 $class("app.Main",{
-	$extends : "jsa.cocoa.ControllerModel",
-	getView : function(uiController){
-		uiController = new jsa.NativeObject(uiController);
-		this.uiController = uiController.weakObject();
+	$extends : "jsa.cocoa.UIViewController",
+	getView : function(viewController){
+		viewController = new jsa.NativeObject(viewController);
+		this.viewController = viewController.weakObject();
 		var me = this;
-		return $new("MyRelativeLayout","initWithJSAParam:",{
+
+		var relative =  $new("MyRelativeLayout","initWithJSAParam:",{
 			subviews:[
 			{
 				id:"1",
@@ -44,6 +45,7 @@ $class("app.Main",{
 			}
 			]
 		});
+		return relative;
 	},
 	onClick:function(){
 		console.log("click in app.Main onClick");

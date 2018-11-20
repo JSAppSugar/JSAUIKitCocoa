@@ -7,6 +7,6 @@
 getView()
 
 */
-$class("jsa.cocoa.ControllerModel",{
+$class("jsa.cocoa.UIViewController",{
 	
 });

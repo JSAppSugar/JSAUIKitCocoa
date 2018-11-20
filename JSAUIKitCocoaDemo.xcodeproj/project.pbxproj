@@ -25,6 +25,7 @@
 		F7A521C6219C4B00002A67D0 /* JSAMyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */; };
 		F7A521CB21A3BA5D002A67D0 /* JSAUIResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521CA21A3BA5D002A67D0 /* JSAUIResponder.m */; };
 		F7A521CE21A3E458002A67D0 /* JSANSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521CD21A3E458002A67D0 /* JSANSObject.m */; };
+		F7A521D121A427B4002A67D0 /* JSAMyLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521D021A427B4002A67D0 /* JSAMyLinearLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		F7A521CA21A3BA5D002A67D0 /* JSAUIResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIResponder.m; sourceTree = "<group>"; };
 		F7A521CC21A3E458002A67D0 /* JSANSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSANSObject.h; sourceTree = "<group>"; };
 		F7A521CD21A3E458002A67D0 /* JSANSObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSANSObject.m; sourceTree = "<group>"; };
+		F7A521CF21A427B4002A67D0 /* JSAMyLinearLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAMyLinearLayout.h; sourceTree = "<group>"; };
+		F7A521D021A427B4002A67D0 /* JSAMyLinearLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAMyLinearLayout.m; sourceTree = "<group>"; };
 		FFEA1DCCC07F03C49D38FFFF /* Pods-JSAUIKitCocoaDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-JSAUIKitCocoaDemoTests/Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +208,7 @@
 				F7A521B1219B24B2002A67D0 /* JSAUIViewController.h */,
 				F7A521C4219C4B00002A67D0 /* JSAMyLayoutPos.h */,
 				F7A521BE219C12DE002A67D0 /* JSAMyRelativeLayout.h */,
+				F7A521CF21A427B4002A67D0 /* JSAMyLinearLayout.h */,
 			);
 			path = JSAUIKitCocoa;
 			sourceTree = "<group>";
@@ -219,6 +223,7 @@
 				F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */,
 				F7A521CA21A3BA5D002A67D0 /* JSAUIResponder.m */,
 				F7A521CD21A3E458002A67D0 /* JSANSObject.m */,
+				F7A521D021A427B4002A67D0 /* JSAMyLinearLayout.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				F7A5218D219B17E5002A67D0 /* main.m in Sources */,
 				F7A5217F219B17E4002A67D0 /* AppDelegate.m in Sources */,
 				F7A521CE21A3E458002A67D0 /* JSANSObject.m in Sources */,
+				F7A521D121A427B4002A67D0 /* JSAMyLinearLayout.m in Sources */,
 				F7A521BA219BDF39002A67D0 /* JSAUIView.m in Sources */,
 				F7A521C0219C12DE002A67D0 /* JSAMyRelativeLayout.m in Sources */,
 				F7A521B3219B24B2002A67D0 /* JSAUIViewController.m in Sources */,
