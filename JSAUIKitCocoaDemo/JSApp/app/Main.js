@@ -10,6 +10,7 @@ $class("app.Main",{
 		var me = this;
 
 		var relative =  $new("MyRelativeLayout","initWithJSAParam:",{
+			wrapContentHeight:true,
 			subviews:[
 			{
 				id:"1",
@@ -45,7 +46,61 @@ $class("app.Main",{
 			}
 			]
 		});
-		return relative;
+
+		var linear = $new("MyLinearLayout","initWithJSAParam:",{
+			orientation : "Vert",
+			padding:10,
+			myHorzMargin:0,
+			subviews:[
+			{
+				view:$new("UIView","initWithJSAParam:",{
+					width:100,
+					height:100,
+					backgroundColor:"#FF0000",
+				}),
+			},
+			{
+				view:$new("UILabel","initWithJSAParam:",{
+					text:"This is a can automatically wrap text.To realize this function, you need to set the clear width, and set the wrapContentHeight to YES.",
+					fontSize:16,
+					textColor:"#1F6FB5",
+				}),
+				myTop:20,
+				myHorzMargin:0,
+				wrapContentHeight:true,
+				numberOfLines:0,
+			},
+			{
+				view:$new("UIView","initWithJSAParam:",{
+					height:200,
+					backgroundColor:"#00FF00",
+				}),
+				myTop:10,
+				myLeft:10,
+				myRight:10,
+			},
+			{
+				view:relative,
+				myHorzMargin:0,
+			},
+			{
+				view:$new("UIView","initWithJSAParam:",{
+					height:200,
+					backgroundColor:"#0000FF",
+				}),
+				myTop:10,
+				myLeft:10,
+				myRight:10,
+			}
+			],
+		});
+		var scrollView = $new("UIScrollView","initWithJSAParam:",{
+			backgroundColor:"#CCCCCC",
+			subviews:[
+			linear
+			]
+		});
+		return scrollView;
 	},
 	onClick:function(){
 		console.log("click in app.Main onClick");

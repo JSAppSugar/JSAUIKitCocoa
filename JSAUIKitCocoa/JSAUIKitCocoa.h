@@ -10,6 +10,7 @@
 #import "JSAUIColor.h"
 #import "JSAUIResponder.h"
 #import "JSAUIView.h"
+#import "JSAUILabel.h"
 #import "JSAUIViewController.h"
 #import "JSAMyRelativeLayout.h"
 #import "JSAMyLinearLayout.h"
