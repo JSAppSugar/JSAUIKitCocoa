@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) initWithJSClass:(NSString*) jsClassName Arguments:(NSArray*) arguments;
 
--(id<JSAObject>) controllerModel;
-
 @end
 
 

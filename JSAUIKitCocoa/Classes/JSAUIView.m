@@ -15,6 +15,11 @@ static const char ASSOCIATEDOBJECT_KEY_JSA_ONCLICK;
 
 @implementation UIView(JSAppSugar)
 
+- (void) onJSAClick{
+    id<JSAFunction> onClick = (id<JSAFunction>)objc_getAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_ONCLICK);
+    [onClick callWithArguments:@[self]];
+}
+
 -(instancetype) initWithJSAParam:(NSDictionary *) param{
     if(self = [self init]){
         if(param != nil || param.count>0){
@@ -46,7 +51,7 @@ static const char ASSOCIATEDOBJECT_KEY_JSA_ONCLICK;
             id<JSAFunction> onClick = [param objectForKey:@"onClick"];
             if(onClick){
                 objc_setAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_ONCLICK, onClick, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:onClick action:@selector(call)];
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onJSAClick)];
                 [self addGestureRecognizer:tap];
                 self.userInteractionEnabled = YES;
             }

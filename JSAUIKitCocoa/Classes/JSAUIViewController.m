@@ -7,21 +7,16 @@
 //
 
 #import "JSAUIViewController.h"
-#import <objc/runtime.h>
+#import "JSANSObject.h"
 
-static const char ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER;
 
 @implementation UIViewController(JSAppSugar)
 
 -(instancetype) initWithJSClass:(NSString*) jsClassName Arguments:(NSArray*) arguments{
     if(self = [self init]){
-        objc_setAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER, [[JSAUIViewController sharedJSA] newClass:jsClassName Arguments:arguments], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self setJSAObject:[[JSAUIViewController sharedJSA] newClass:jsClassName Arguments:arguments]];
     }
     return self;
-}
-
--(id<JSAObject>) controllerModel{
-    return objc_getAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_CONTROLLER);
 }
 
 @end
@@ -45,7 +40,7 @@ static JSA4Cocoa* _jsa;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    id<JSAObject> jsaVC = [self controllerModel];
+    id<JSAObject> jsaVC = self.jsaObject;
     if(jsaVC){
         UIView* v = [jsaVC invokeMethod:@"getView"];
         if(v){

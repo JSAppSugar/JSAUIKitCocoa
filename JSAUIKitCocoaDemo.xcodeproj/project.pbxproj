@@ -23,6 +23,8 @@
 		F7A521C0219C12DE002A67D0 /* JSAMyRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521BF219C12DE002A67D0 /* JSAMyRelativeLayout.m */; };
 		F7A521C3219C1623002A67D0 /* JSAUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521C2219C1623002A67D0 /* JSAUIColor.m */; };
 		F7A521C6219C4B00002A67D0 /* JSAMyLayoutPos.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */; };
+		F7A521CB21A3BA5D002A67D0 /* JSAUIResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521CA21A3BA5D002A67D0 /* JSAUIResponder.m */; };
+		F7A521CE21A3E458002A67D0 /* JSANSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521CD21A3E458002A67D0 /* JSANSObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		F7A521C2219C1623002A67D0 /* JSAUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIColor.m; sourceTree = "<group>"; };
 		F7A521C4219C4B00002A67D0 /* JSAMyLayoutPos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAMyLayoutPos.h; sourceTree = "<group>"; };
 		F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAMyLayoutPos.m; sourceTree = "<group>"; };
+		F7A521C921A3BA5D002A67D0 /* JSAUIResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUIResponder.h; sourceTree = "<group>"; };
+		F7A521CA21A3BA5D002A67D0 /* JSAUIResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIResponder.m; sourceTree = "<group>"; };
+		F7A521CC21A3E458002A67D0 /* JSANSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSANSObject.h; sourceTree = "<group>"; };
+		F7A521CD21A3E458002A67D0 /* JSANSObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSANSObject.m; sourceTree = "<group>"; };
 		FFEA1DCCC07F03C49D38FFFF /* Pods-JSAUIKitCocoaDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-JSAUIKitCocoaDemoTests/Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,7 +198,9 @@
 			children = (
 				F7A521B0219B223C002A67D0 /* Classes */,
 				F7A521B4219B2524002A67D0 /* JSAUIKitCocoa.h */,
+				F7A521CC21A3E458002A67D0 /* JSANSObject.h */,
 				F7A521C1219C1623002A67D0 /* JSAUIColor.h */,
+				F7A521C921A3BA5D002A67D0 /* JSAUIResponder.h */,
 				F7A521B8219BDF39002A67D0 /* JSAUIView.h */,
 				F7A521B1219B24B2002A67D0 /* JSAUIViewController.h */,
 				F7A521C4219C4B00002A67D0 /* JSAMyLayoutPos.h */,
@@ -209,6 +217,8 @@
 				F7A521BF219C12DE002A67D0 /* JSAMyRelativeLayout.m */,
 				F7A521C2219C1623002A67D0 /* JSAUIColor.m */,
 				F7A521C5219C4B00002A67D0 /* JSAMyLayoutPos.m */,
+				F7A521CA21A3BA5D002A67D0 /* JSAUIResponder.m */,
+				F7A521CD21A3E458002A67D0 /* JSANSObject.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -458,8 +468,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A521C3219C1623002A67D0 /* JSAUIColor.m in Sources */,
+				F7A521CB21A3BA5D002A67D0 /* JSAUIResponder.m in Sources */,
 				F7A5218D219B17E5002A67D0 /* main.m in Sources */,
 				F7A5217F219B17E4002A67D0 /* AppDelegate.m in Sources */,
+				F7A521CE21A3E458002A67D0 /* JSANSObject.m in Sources */,
 				F7A521BA219BDF39002A67D0 /* JSAUIView.m in Sources */,
 				F7A521C0219C12DE002A67D0 /* JSAMyRelativeLayout.m in Sources */,
 				F7A521B3219B24B2002A67D0 /* JSAUIViewController.m in Sources */,
