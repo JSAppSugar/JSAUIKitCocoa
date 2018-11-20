@@ -4,7 +4,10 @@ $import(
 
 $class("app.Main",{
 	$extends : "jsa.cocoa.ControllerModel",
-	getView : function(){
+	getView : function(uiController){
+		uiController = new jsa.NativeObject(uiController);
+		this.uiController = uiController.weakObject();
+		var me = this;
 		return $new("MyRelativeLayout","initWithJSAParam:",{
 			subviews:[
 			{
@@ -13,8 +16,11 @@ $class("app.Main",{
 					width:100,
 					height:100,
 					backgroundColor:"#00FF00",
-					onClick : function(){
-						console.log("click");
+					onClick : function(view){
+						console.log("click in function onClick");
+						var responder = new jsa.NativeObject(view);
+						responder.invoke("dispatchJSAUIActionEventWithName:Object:UserInfo:","onClick",null,null);
+						me.myClick();
 					},
 				}),
 				centerXPos : 0,
@@ -38,5 +44,11 @@ $class("app.Main",{
 			}
 			]
 		});
+	},
+	onClick:function(){
+		console.log("click in app.Main onClick");
+	},
+	myClick:function(){
+		console.log("click in app.Main myClick");
 	}
 });

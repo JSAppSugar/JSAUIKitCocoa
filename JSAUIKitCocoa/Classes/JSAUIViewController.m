@@ -42,7 +42,7 @@ static JSA4Cocoa* _jsa;
     // Do any additional setup after loading the view.
     id<JSAObject> jsaVC = self.jsaObject;
     if(jsaVC){
-        UIView* v = [jsaVC invokeMethod:@"getView"];
+        UIView* v = [jsaVC invokeMethod:@"getView" Arguments:@[self]];
         if(v){
             v.frame = self.view.frame;
             [self.view addSubview:v];

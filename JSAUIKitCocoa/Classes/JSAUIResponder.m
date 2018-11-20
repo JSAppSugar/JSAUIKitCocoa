@@ -7,6 +7,7 @@
 //
 
 #import "JSAUIResponder.h"
+#import "JSANSObject.h"
 #import <objc/message.h>
 
 #pragma mark - JSAUIActionEvent
@@ -65,10 +66,7 @@
 #pragma mark - UIResponder(JSAppSugar)
 @implementation UIResponder (JSAppSugar)
 
-- (void)dispatchJSAUIActionEvent:(JSAUIActionEvent *)actionEvent {
-    NSString * name = [[[actionEvent.name substringToIndex:1] uppercaseString] stringByAppendingString:[actionEvent.name substringFromIndex:1]];
-    NSString * actionSelectorName = [NSString stringWithFormat:@"handle%@WithActionEvent:", name];
-    SEL sel = NSSelectorFromString(actionSelectorName);
+-(void) dispatchJSAUIActionEvent:(JSAUIActionEvent *)actionEvent Selector:(SEL)sel{
     if ([self respondsToSelector:sel]) {
         JSAUIActionEventHandleResult * result = ((id(*)(id, SEL,JSAUIActionEvent*))objc_msgSend)(self, sel, actionEvent);
         if (result == nil ||
@@ -77,10 +75,26 @@
             return;
         }
     }
+    id<JSAObject> jsaObject = self.jsaObject;
+    if(jsaObject && [jsaObject hasMethod:actionEvent.name]){
+        id object = actionEvent.object==nil?[NSNull null]:actionEvent.object;
+        id userInfo = actionEvent.userInfo==nil?[NSNull null]:actionEvent.userInfo;
+        id v = [jsaObject invokeMethod:actionEvent.name Arguments:@[object,userInfo]];
+        if(v == nil || ![v boolValue]){
+            return;
+        }
+    }
     UIResponder * next = [self nextResponder];
     if (next) {
         [next dispatchJSAUIActionEvent:actionEvent];
     }
+}
+
+- (void)dispatchJSAUIActionEvent:(JSAUIActionEvent *)actionEvent {
+    NSString * name = [[[actionEvent.name substringToIndex:1] uppercaseString] stringByAppendingString:[actionEvent.name substringFromIndex:1]];
+    NSString * actionSelectorName = [NSString stringWithFormat:@"handle%@WithActionEvent:", name];
+    SEL sel = NSSelectorFromString(actionSelectorName);
+    [self dispatchJSAUIActionEvent:actionEvent Selector:sel];
 }
 
 - (void)dispatchJSAUIActionEventWithName:(NSString *)name Object:(id)object UserInfo:(NSDictionary *)userInfo{
