@@ -28,6 +28,7 @@
 		F7A521D121A427B4002A67D0 /* JSAMyLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521D021A427B4002A67D0 /* JSAMyLinearLayout.m */; };
 		F7A521D421A45540002A67D0 /* JSAUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521D321A45540002A67D0 /* JSAUILabel.m */; };
 		F7A521D721A54BA8002A67D0 /* JSAUITextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521D621A54BA8002A67D0 /* JSAUITextfield.m */; };
+		F7A521DA21A55F84002A67D0 /* JSAUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A521D921A55F84002A67D0 /* JSAUIButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		F7A521D321A45540002A67D0 /* JSAUILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUILabel.m; sourceTree = "<group>"; };
 		F7A521D521A54BA8002A67D0 /* JSAUITextfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUITextfield.h; sourceTree = "<group>"; };
 		F7A521D621A54BA8002A67D0 /* JSAUITextfield.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUITextfield.m; sourceTree = "<group>"; };
+		F7A521D821A55F84002A67D0 /* JSAUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAUIButton.h; sourceTree = "<group>"; };
+		F7A521D921A55F84002A67D0 /* JSAUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAUIButton.m; sourceTree = "<group>"; };
 		FFEA1DCCC07F03C49D38FFFF /* Pods-JSAUIKitCocoaDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-JSAUIKitCocoaDemoTests/Pods-JSAUIKitCocoaDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +216,7 @@
 				F7A521B8219BDF39002A67D0 /* JSAUIView.h */,
 				F7A521D221A45540002A67D0 /* JSAUILabel.h */,
 				F7A521D521A54BA8002A67D0 /* JSAUITextfield.h */,
+				F7A521D821A55F84002A67D0 /* JSAUIButton.h */,
 				F7A521B1219B24B2002A67D0 /* JSAUIViewController.h */,
 				F7A521BE219C12DE002A67D0 /* JSAMyRelativeLayout.h */,
 				F7A521CF21A427B4002A67D0 /* JSAMyLinearLayout.h */,
@@ -234,6 +238,7 @@
 				F7A521D021A427B4002A67D0 /* JSAMyLinearLayout.m */,
 				F7A521D321A45540002A67D0 /* JSAUILabel.m */,
 				F7A521D621A54BA8002A67D0 /* JSAUITextfield.m */,
+				F7A521D921A55F84002A67D0 /* JSAUIButton.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				F7A521D421A45540002A67D0 /* JSAUILabel.m in Sources */,
 				F7A521CE21A3E458002A67D0 /* JSANSObject.m in Sources */,
 				F7A521D121A427B4002A67D0 /* JSAMyLinearLayout.m in Sources */,
+				F7A521DA21A55F84002A67D0 /* JSAUIButton.m in Sources */,
 				F7A521BA219BDF39002A67D0 /* JSAUIView.m in Sources */,
 				F7A521D721A54BA8002A67D0 /* JSAUITextfield.m in Sources */,
 				F7A521C0219C12DE002A67D0 /* JSAMyRelativeLayout.m in Sources */,

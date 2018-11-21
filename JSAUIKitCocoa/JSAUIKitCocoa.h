@@ -11,6 +11,8 @@
 #import "JSAUIResponder.h"
 #import "JSAUIView.h"
 #import "JSAUILabel.h"
+#import "JSAUITextfield.h"
+#import "JSAUIButton.h"
 #import "JSAUIViewController.h"
 #import "JSAMyRelativeLayout.h"
 #import "JSAMyLinearLayout.h"

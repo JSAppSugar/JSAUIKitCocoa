@@ -12,4 +12,6 @@
 
 -(instancetype) initWithJSAParam:(NSDictionary *) param;
 
+-(void) setJSAParam:(NSDictionary *) param;
+
 @end
