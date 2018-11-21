@@ -37,6 +37,15 @@
         if(numberOfLines!=nil){
             self.numberOfLines = [numberOfLines integerValue];
         }
+        NSString* textAlignment = [param objectForKey:@"textAlignment"];
+        if(textAlignment){
+            if([@"center" isEqualToString:textAlignment]){
+                self.textAlignment = NSTextAlignmentCenter;
+            }
+            else if([@"right" isEqualToString:textAlignment]){
+                self.textAlignment = NSTextAlignmentRight;
+            }
+        }
     }
     return self;
 }
