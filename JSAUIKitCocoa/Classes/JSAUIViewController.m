@@ -8,6 +8,7 @@
 
 #import "JSAUIViewController.h"
 #import "JSANSObject.h"
+#import "JSAUIResponder.h"
 
 
 @implementation UIViewController(JSAppSugar)
@@ -40,6 +41,7 @@ static JSA4Cocoa* _jsa;
 - (void)loadView {
     // Do any additional setup after loading the view.
     id<JSAObject> jsaVC = self.jsaObject;
+    [self setJSAUIActionEventObserver: jsaVC];
     if(jsaVC){
         UIView* v = [jsaVC invokeMethod:@"getView" Arguments:@[self]];
         if(v){

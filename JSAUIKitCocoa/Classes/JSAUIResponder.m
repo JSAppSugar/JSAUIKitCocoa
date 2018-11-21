@@ -7,8 +7,10 @@
 //
 
 #import "JSAUIResponder.h"
-#import "JSANSObject.h"
+#import <JSA4Cocoa/JSAppSugar.h>
 #import <objc/message.h>
+
+static const char ASSOCIATEDOBJECT_KEY_JSA_OBSERVER;
 
 #pragma mark - JSAUIActionEvent
 @interface JSAUIActionEvent ()
@@ -75,7 +77,7 @@
             return;
         }
     }
-    id<JSAObject> jsaObject = self.jsaObject;
+    id<JSAObject> jsaObject = [self getJSAUIActionEventObserver];
     if(jsaObject && [jsaObject hasMethod:actionEvent.name]){
         id object = actionEvent.object==nil?[NSNull null]:actionEvent.object;
         id userInfo = actionEvent.userInfo==nil?[NSNull null]:actionEvent.userInfo;
@@ -100,6 +102,16 @@
 - (void)dispatchJSAUIActionEventWithName:(NSString *)name Object:(id)object UserInfo:(NSDictionary *)userInfo{
     JSAUIActionEvent* event = [JSAUIActionEvent eventWithName:name Object:object UserInfo:userInfo];
     [self dispatchJSAUIActionEvent:event];
+}
+
+-(id<JSAObject>)getJSAUIActionEventObserver{
+    id<JSAWeakObject> weakObj = objc_getAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_OBSERVER);
+    return [weakObj value];
+}
+
+-(void)setJSAUIActionEventObserver:(id<JSAObject>) observer{
+    id<JSAWeakObject> weakObj = [observer weakObject];
+    objc_setAssociatedObject(self, &ASSOCIATEDOBJECT_KEY_JSA_OBSERVER, weakObj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

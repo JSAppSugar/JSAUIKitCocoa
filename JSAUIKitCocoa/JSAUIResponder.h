@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JSA4Cocoa/JSAppSugar.h>
 
 @interface JSAUIActionEvent : NSObject
 
@@ -71,6 +72,14 @@
  @param userInfo 事件的其他信息
  */
 - (void)dispatchJSAUIActionEventWithName:(NSString *)name Object:(id)object UserInfo:(NSDictionary *)userInfo;
+
+/*!
+ @method
+ @abstract 设置JSAObject为事件监听器
+ @discussion UIResponder对象不会对observer对象产生强引用因此调用方应自己确保observer的生命周期与UIResponder一致
+ @param observer 监听对象
+ */
+-(void)setJSAUIActionEventObserver:(id<JSAObject>) observer;
 
 @end
 
