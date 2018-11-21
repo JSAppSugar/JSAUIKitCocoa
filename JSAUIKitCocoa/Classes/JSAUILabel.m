@@ -46,6 +46,10 @@
                 self.textAlignment = NSTextAlignmentRight;
             }
         }
+        NSNumber* sizeToFit = [param objectForKey:@"sizeToFit"];
+        if(sizeToFit){
+            [self sizeToFit];
+        }
     }
     return self;
 }

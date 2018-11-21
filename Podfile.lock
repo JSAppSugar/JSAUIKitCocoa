@@ -1,5 +1,5 @@
 PODS:
-  - JSA4Cocoa (1.0.0)
+  - JSA4Cocoa (1.0.1)
   - MyLayout (1.6.1)
 
 DEPENDENCIES:
@@ -12,7 +12,7 @@ SPEC REPOS:
     - MyLayout
 
 SPEC CHECKSUMS:
-  JSA4Cocoa: c69ca0463a43a42762c4c2c29448beb6fa28d4a7
+  JSA4Cocoa: 29ed29741287d6b4ddc73dceaeeee0de99b357a0
   MyLayout: 833c4b24a69a1e3fd33abe827eeb2fdf19193408
 
 PODFILE CHECKSUM: 6cab6b7049d798971ec9b8517efcb76eb942cc63
