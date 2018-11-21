@@ -7,7 +7,7 @@ $class("jsa.cocoa.UIResponder",{
 	dispatch:{
 			$oc : "dispatchJSAUIActionEventWithName:Object:UserInfo:"
 	},
-	setDispatcher:{
+	setObserver:{
 		$oc : "setJSAUIActionEventObserver:"
 	}
 });

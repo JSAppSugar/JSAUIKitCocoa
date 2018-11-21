@@ -38,6 +38,11 @@ static const char ASSOCIATEDOBJECT_KEY_JSA_EDITINGDIDEND;
                 self.borderStyle = UITextBorderStyleLine;
             }
         }
+        NSString* text = [param valueForKey:@"text"];
+        if(text){
+            self.text = text;
+        }
+        
         NSString* placeholder = [param valueForKey:@"placeholder"];
         if(placeholder){
             self.placeholder = placeholder;
