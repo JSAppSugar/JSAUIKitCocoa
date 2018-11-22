@@ -55,3 +55,7 @@ $class("app.Main",{
 
 JSAUIKitCocoa展示了一种使用[JSAppSugar](https://github.com/JSAppSugar/JSAppSugar)编写原生应用业务逻辑的方式，你也可以使用JSAppSugar创造你自己的混合编程方式。
 
+## 使用文档
+
+[中文](https://github.com/JSAppSugar/JSAUIKitCocoa/wiki)
+
